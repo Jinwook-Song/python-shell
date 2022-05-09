@@ -11,7 +11,7 @@ const port = 3000;
 
 app.get('/', (req, res) => {
   let dataToSend;
-  const python = spawn('python', ['./src/function_w_args.py', 'jinwook', '30']);
+  const python = spawn('python', ['./src/audio_process.py']);
   python.stdout.on('data', (data) => {
     dataToSend = data.toString();
   });
