@@ -1,7 +1,12 @@
 import librosa
+import pandas as pd
 
-audio_path = "./assets/audio_sample.wav"
-y, sr = librosa.load(audio_path, sr=None)
+AUDIO_PATH = "./assets/audio_sample.wav"
+y, sr = librosa.load(AUDIO_PATH, sr=None)
+y_Series = pd.Series(y)
+
+librosa.feature.chroma_stft
 
 print(f"duration: {len(y)/sr}")
 print(f"sampling rate: {sr}")
+print(f"Series: {y_Series}")
